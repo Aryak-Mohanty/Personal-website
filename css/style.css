@@ -1,1 +1,596 @@
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #2F2E41;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
+[data-theme="dark"] {
+    --primary-color: #8c85ff;
+    --secondary-color: #f0f0f0;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --navbar-bg: rgba(18, 18, 18, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* --- SCROLL ADJUSTMENTS (FIXED) --- */
+#about {
+    scroll-margin-top: 80px;
+}
+
+#education {
+    scroll-margin-top: 80px;
+}
+
+#skills {
+    scroll-margin-top: 85px;
+}
+
+#projects {
+    scroll-margin-top: 85px;
+}
+
+#websites {
+    scroll-margin-top: 85px;
+}
+
+#experience {
+    scroll-margin-top: 85px;
+}
+
+#achievements {
+    scroll-margin-top: 85px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url('../20251127_173958-COLLAGE.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), url('../20251127_173958-COLLAGE.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.profile-img-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-img-container:hover .profile-img {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+.social-links .btn {
+    height: 48px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* GitHub Button */
+.social-links .btn-outline-dark {
+    border-color: #6b7280 !important;
+    color: #6b7280 !important;
+    background-color: transparent;
+}
+
+[data-theme="dark"] .social-links .btn-outline-dark {
+    border-color: #9ca3af !important;
+    color: #e5e7eb !important;
+    background-color: rgba(156, 163, 175, 0.1);
+}
+
+.social-links .btn-outline-dark:hover {
+    background-color: #6b7280 !important;
+    border-color: #6b7280 !important;
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] .social-links .btn-outline-dark:hover {
+    background-color: #9ca3af !important;
+    border-color: #9ca3af !important;
+    color: #1f2937 !important;
+}
+
+.social-links .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px var(--shadow-color) !important;
+}
+
+.institution-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: white;
+    padding: 5px;
+}
+
+/* Skills */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#skills .badge.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] #skills .badge.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: white !important;
+}
+
+[data-theme="dark"] #skills .badge.bg-primary {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: white !important;
+}
+
+.badge:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item {
+    background-color: transparent !important;
+    color: var(--text-color) !important;
+    border: none !important;
+}
+
+/* Sections */
+.bg-light {
+    background-color: var(--bg-color) !important;
+}
+
+.text-muted {
+    color: var(--text-color) !important;
+    opacity: 0.7;
+}
+
+.text-dark {
+    color: var(--text-color) !important;
+}
+
+/* Enhanced Websites Section Cards */
+#websites .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--card-bg);
+}
+
+#websites .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+#websites .card:hover::before {
+    transform: scaleX(1);
+}
+
+#websites .card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+[data-theme="dark"] #websites .card:hover {
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    background: rgba(40, 40, 60, 0.95);
+}
+
+#websites .icon-box {
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+#websites .card:hover .icon-box {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#websites .card:hover .icon-box i {
+    animation: iconPulse 0.6s ease-in-out;
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+#websites .card-title {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#websites .card:hover .card-title {
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+[data-theme="dark"] #websites .card:hover .card-title {
+    color: #a0aeff;
+}
+
+/* Add glow effect for dark theme */
+[data-theme="dark"] #websites .card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+[data-theme="dark"] #websites .card:hover::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+/* Smooth link transition */
+#websites a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#websites .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+footer {
+    background-color: #000 !important;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+footer a {
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 60px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .profile-img-container {
+        margin: 0 auto 30px auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    #theme-toggle {
+        margin: 5px auto 0 auto !important;
+        display: block;
+        width: fit-content;
+    }
+
+    .navbar-nav .nav-link {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h4.card-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .profile-img-container {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .social-links .btn {
+        width: 100%;
+        max-width: 280px;
+        margin-right: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-body {
+        padding: 1.25rem !important;
+    }
+
+    .institution-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    #education,
+    #skills,
+    #projects,
+    #websites,
+    #experience,
+    #achievements {
+        scroll-margin-top: 80px;
+    }
+}
+
+/* --- FOCUS EFFECT (Fade out others) - DESKTOP ONLY --- */
+@media (min-width: 992px) {
+
+    /* Websites Section */
+    #websites .row:hover .card {
+        opacity: 0.4;
+        filter: blur(2px) grayscale(80%);
+        transform: scale(0.9);
+        transition: all 0.4s ease;
+    }
+
+    #websites .row .card:hover {
+        opacity: 1;
+        filter: blur(0) grayscale(0%);
+        transform: translateY(-15px) scale(1.02);
+        z-index: 10;
+        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Experience Section */
+    #experience .row:hover .card {
+        opacity: 0.4;
+        filter: blur(2px) grayscale(80%);
+        transform: scale(0.9);
+        transition: all 0.4s ease;
+    }
+
+    #experience .row .card:hover {
+        opacity: 1;
+        filter: blur(0) grayscale(0%);
+        transform: translateY(-5px) scale(1.02);
+        z-index: 10;
+        box-shadow: 0 15px 30px var(--shadow-color) !important;
+    }
+
+    /* Education, Skills, Projects, Achievements */
+    #education .row:hover .card,
+    #skills .row:hover .card,
+    #projects .row:hover .card,
+    #achievements .row:hover .card {
+        opacity: 0.4;
+        filter: blur(2px) grayscale(80%);
+        transform: scale(0.9);
+        transition: all 0.4s ease;
+    }
+
+    #education .row .card:hover,
+    #skills .row .card:hover,
+    #projects .row .card:hover,
+    #achievements .row .card:hover {
+        opacity: 1;
+        filter: blur(0) grayscale(0%);
+        transform: translateY(-5px) scale(1.02);
+        z-index: 10;
+        box-shadow: 0 15px 30px var(--shadow-color) !important;
+    }
+}
+
+/* --- MOBILE POLISH (Websites Section) --- */
+@media (max-width: 991px) {
+    #websites .card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] #websites .card {
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #websites .card::before {
+        transform: scaleX(1);
+        height: 3px;
+        opacity: 0.8;
+    }
+
+    #websites .card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
