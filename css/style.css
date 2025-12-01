@@ -513,7 +513,7 @@ footer a:hover {
 @media (min-width: 992px) {
 
     /* Websites Section */
-    #websites .row:hover .card {
+    #websites .row:has(.card:hover) .card:not(:hover) {
         opacity: 0.4;
         filter: blur(2px) grayscale(80%);
         transform: scale(0.9);
@@ -529,7 +529,7 @@ footer a:hover {
     }
 
     /* Experience Section */
-    #experience .row:hover .card {
+    #experience .row:has(.card:hover) .card:not(:hover) {
         opacity: 0.4;
         filter: blur(2px) grayscale(80%);
         transform: scale(0.9);
@@ -545,10 +545,10 @@ footer a:hover {
     }
 
     /* Education, Skills, Projects, Achievements */
-    #education .row:hover .card,
-    #skills .row:hover .card,
-    #projects .row:hover .card,
-    #achievements .row:hover .card {
+    #education .row:has(.card:hover) .card:not(:hover),
+    #skills .row:has(.card:hover) .card:not(:hover),
+    #projects .row:has(.card:hover) .card:not(:hover),
+    #achievements .row:has(.card:hover) .card:not(:hover) {
         opacity: 0.4;
         filter: blur(2px) grayscale(80%);
         transform: scale(0.9);
