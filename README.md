@@ -13,13 +13,13 @@ This portfolio website is designed to serve as a digital resume and professional
 <li>Includes smooth scrolling, animations, and section-based cards</li>
 </ul>
 
-2. Theme Toggle – Light/Dark Mode
+2. Theme Toggle – Light/Dark Mode ->
 <ul style="list-style-type: disc;">
 <li>Managed using localStorage to remember user preferences</li>
 <li>Smooth transitions implemented through CSS variables</li>
 </ul>
 
-3. Structured Sections
+3. Structured Sections ->
 <ul style="list-style-type: disc;">
 <li>About Me</li>
 <li>Education</li>
@@ -30,13 +30,13 @@ This portfolio website is designed to serve as a digital resume and professional
 <li>Achievements & Certifications</li>
 </ul>
 
-4. Interactive Animations
+4. Interactive Animations ->
 <ul style="list-style-type: disc;">
 <li>AOS (Animate On Scroll) integrated for scroll-based effects</li>
 <li>Enhanced hover interactions for cards and elements</li>
 </ul>
 
-5. Additional Functionalities
+5. Additional Functionalities ->
 <ul style="list-style-type: disc;">
 <li>Downloadable resume</li>
 <li>Direct links to LinkedIn and GitHub</li>
@@ -66,3 +66,4 @@ The website is deployed using Cloudflare Pages, offering:
 
 <h2>📄 License</h2>
 This project is created for personal and professional portfolio purposes. Unauthorized redistribution, copying, or replication of the design or content is discouraged.
+<hr>
