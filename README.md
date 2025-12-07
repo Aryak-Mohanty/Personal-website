@@ -7,7 +7,8 @@ This repository contains the complete source code for my personal portfolio webs
 This portfolio website is designed to serve as a digital resume and professional identity platform. It highlights key aspects of my technical and personal journey while providing easy navigation, responsive design, and modern UI/UX elements. Visitors can explore my educational qualifications, technical capabilities, hands-on projects, certifications, and links to other tools and web applications I have built.
 
 <h2>🧩 Features</h2>
-1. Responsive & Modern UI ->
+
+ 1. Responsive & Modern UI ->
 <ul style="list-style-type: disc;">
 
 <li>Built with Bootstrap 5, Google Fonts, and Font Awesome</li>
