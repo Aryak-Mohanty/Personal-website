@@ -8,6 +8,7 @@ This portfolio website is designed to serve as a digital resume and professional
 
 <h2>🧩 Features</h2>
 1. Responsive & Modern UI -> 
+
 <ul style="list-style-type: disc;">
 <li>Built with Bootstrap 5, Google Fonts, and Font Awesome</li>
 <li>Includes smooth scrolling, animations, and section-based cards</li>
